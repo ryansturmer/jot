@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <title>{{notes.title}}</title>
+        <style type="text/css">
+            body {
+                font-family:lucida,tahoma,verdana,sans-serif; 
+                font-size: 12px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px; 
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+                background-repeat: no-repeat;
+                background-image: url(data:image/png;base64,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);
+            }
+
+            .plus {
+                width: 13px;
+                height: 13px;
+                background-repeat: no-repeat;
+                background-image: url(data:image/gif;base64,R0lGODlhDQANAMIEAAAAAHt7e4SEhP8A/////////////////yH5BAEAAAcALAAAAAANAA0AAAMpeLrc/kHEKZkgOBPBQgZZYH0Zt3hAmhLicmEgZioeHI6a3En89PxARgIAOw==);
+                background-position: center;
+            }
+
+            .minus {
+                width: 13px; height: 13px; background-repeat: no-repeat;
+                background-image: url(data:image/gif;base64,R0lGODlhDQANAMIEAAAAAHt7e4SEhP8A/////////////////yH5BAEAAAcALAAAAAANAA0AAAMmeLrc/kHEKZkgOBPBgs6B9WHc4gEoSoTLNZaKN7KK+8EHpT98zyQAOw==);
+                background-position: center;
+            }
+            .button {
+                border-width: 1px;
+                padding: 3px;
+                border-collapse: collapse;
+                border-style: solid;
+                font-size: 12px;
+                background-color: #eeeeee;
+                cursor: pointer;
+                user-select: none;
+            }
+            .noteTitle {
+                font-weight: bold;
+                font-size: 12px;
+            }
+            .noteDataTable {
+                border-width: 1px;
+                padding: 3px;
+                border-collapse: collapse;
+                border-style: solid;
+                font-size: 12px;
+                color: #0000ff;
+            }
+            .noteDatestamp {
+                font-weight: bold;
+                font-size: 12px;
+            }
+            .notebookTableKey {
+                font-weight: bold;
+                font-size: 12px;
+                text-align: right;
+            }
+            .notebookTitle {
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .noteSummary {
+                font-size: 12px;
+            }
+            .noteBody {
+                font-size: 12px;
+            }
+            .noteMono {
+                font-size: 12px;
+                font-family: monospace;
+            }
+            .notebookTableValue {
+                font-size: 12px;
+            }
+            .collapsible {}
+        </style>
+
+        <script language="javascript" type="text/javascript">
+            function toggle_div(div_id) {
+                var divstyle = new String();
+                divstyle = document.getElementById(div_id).style.display;
+                if (divstyle.toLowerCase() == "table-row" || divstyle == "") {
+                    document.getElementById(div_id).style.display = "none";
+                } 
+                else {
+                    document.getElementById(div_id).style.display = "table-row";
+                }
+            }
+            function get_elements_matching(s) {
+                var retval = [];
+                var re = new RegExp(s);
+                var all_elements = document.getElementsByTagName('*');
+                    for(i=0; i<all_elements.length; i++) {
+                        var keep = re.test(all_elements[i].id);
+                        if(keep) {
+                            retval.push(all_elements[i]);
+                        }
+                    }
+                return retval;
+
+            }
+            function toggle_plusminus(div_item) {
+                var classname = new String();
+                classname = div_item.getAttribute("class");
+                if(classname == "minus") {
+                    div_item.setAttribute("class", "plus");
+                } else {
+                    div_item.setAttribute("class", "minus");
+                }
+            }
+
+            function switch_all(state) {
+                if(state == 0) { // Collapse
+                    e = document.getElementsByClassName("collapsible");
+                    for(i=0; i<e.length; i++) {
+                        e[i].style.display = "none";
+                    }
+                    e = get_elements_matching("button_*");
+                    for(i=0; i<e.length; i++) {
+                        e[i].setAttribute("class","plus");
+                    }
+
+                } else { // Expand
+                    var e = new Array();
+                    e = document.getElementsByClassName("collapsible");
+                    for(i=0; i<e.length; i++) {
+                        e[i].style.display = "table-row";
+                    }
+                    e = get_elements_matching("button_*");
+                    for(i=0; i<e.length; i++) {
+                        e[i].setAttribute("class","minus");
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <table border="0" cellpadding="2">
+            <col />
+            <col width="0px" />
+            <col />
+              <tr>
+                <td rowspan="4" class="logo">&nbsp;</td>
+                  <td class="notebookTitle" colspan="2">{{notes.title}}</div>
+              </tr>
+            <tr>
+                <td class="notebookTableKey">Created:</td>
+                <td class="notebookTableValue">{{notes.created_string}}</td>
+            </tr>
+             <tr>
+                <td class="notebookTableKey">Modified:</td>
+                <td class="notebookTableValue">{{notes.modified_string}}</td>
+            </tr>
+              <tr>
+                  <td class="notebookTableKey">User:</td>
+                  <td class="notebookTableValue">{{notes.user}}</td>
+              </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td onclick="switch_all(0)" class="button"> Collapse All</td>
+                <td onclick="switch_all(1)" class="button"> Expand All</td>
+            </tr>
+        </table>
+            <br />
+                    
+
+        <table width="100%" border="0">
+            <col width="0" />
+            <col width="13" />
+            <col />
+            <!-- Single Row of logbook -->
+            {% for i, note in notes %}
+            <tr>
+                <td style="white-space:nowrap;"><div class="noteDatestamp">{{ note.date_string }}</div></td>
+                <td width="13">
+                    {% if note.body is not none %}
+                    <div id="button_{{i}}" class="plus" onclick='toggle_div("entry_{{i}}"); toggle_plusminus(this)'></div>
+                    {% endif %}
+                </td>
+                <td><span class="noteTitle" width="100%">{{ note.title }}</span> <span class="noteSummary">{{note.summary}}</span></td>
+            </tr>
+            {% if note.body is not none %}
+            <tr id="entry_{{i}}" style="display:none;" class="collapsible">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="noteBody">
+                    {{note.body}}
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+    </body>
+</html>
